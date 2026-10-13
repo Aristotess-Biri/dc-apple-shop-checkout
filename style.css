@@ -167,9 +167,32 @@ padding is optional but i do this because of lists*/
 body {
     font: var(--font-body-regular);
     color: var(--clr-text);
-    padding: 3rem 10vw;
+    padding: 3rem 5vw;
     background-color: var(--clr-bg-main);
     background-image: url("assets/background-image.png");
     background-repeat: no-repeat no-repeat;
     background-position: top;
+}
+
+/* Header */
+h1 {
+    font: var(--font-heading);
+    color: var(--clr-text-alt);
+}
+
+.item-num {
+    color: var(--clr-text-alt);
+    font: var(--font-body-regular);
+    font-variant: small-caps;
+    background-color: var(--clr-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+}
+
+header {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
