@@ -21,7 +21,42 @@
         </header>
 
         <main>
-            <section class="cart" aria-label="Shopping Cart Items"></section>
+            <section class="cart" aria-label="Shopping Cart Items">
+                <!-- Cart -->
+                <div class__allItems>
+                    <div class="cart__item"></div>
+                    <div class="cart__item"></div>
+                    <div class="cart__item"></div>
+                </div>
+
+                <hr>
+
+                <!-- Coupon -->
+                <div class="cart__coupon">
+                    <form class="coupon">
+                        <input type="text" name="coupon" class="coupon__input" placeholder="Enter coupon code">
+                        <button type="button" class="coupon__btn">Apply Coupon</button>
+                    </form>
+                </div>
+
+                <!-- Price summary -->
+                <dl class="cart__summary summary">
+                    <div class="summary__item">
+                        <dt>Sub total</dt>
+                        <dd>$2597.00</dd>
+                    </div>
+
+                    <div class="summary__item">
+                        <dt>Tax</dt>
+                        <dd>$623.28</dd>
+                    </div>
+
+                    <div class="summary__item summary__item--total">
+                        <dt>Total</dt>
+                        <dd>$3220.28</dd>
+                    </div>
+                </dl>
+            </section>
 
             <section class="form"></section>
         </main>
