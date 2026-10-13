@@ -166,6 +166,7 @@ padding is optional but i do this because of lists*/
 /* Base styling */
 body {
     font: var(--font-body-regular);
+    color: var(--clr-text);
     padding: 3rem 10vw;
     background-color: var(--clr-bg-main);
     background-image: url("assets/background-image.png");
