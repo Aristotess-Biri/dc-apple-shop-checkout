@@ -149,12 +149,14 @@ padding is optional but i do this because of lists*/
 
     --clr-text: #394150;
     --clr-text-alt: #FFFFFF;
-    --clr-text-placeholder: #394150;
+    --clr-text-placeholder: #9CA3AF;
 
     --clr-primary: #1D1D1F;
+    --clr-primary-active: #65656c;
     --clr-input-contact: #E5E7EB;
     --clr-input-coupon: #FFFFFF;
     --clr-lines: #D2D5DA;
+    --clr-lines-active: #1D1D1F;
 
     /* Font */
     --font-heading: 700 1.5rem/1.1 "Inter", sans-serif;
@@ -195,4 +197,73 @@ header {
     gap: 1rem;
     justify-content: center;
     align-items: center;
+}
+
+/* Shopping Cart */
+
+.cart {
+    padding: 1rem;
+    background-color: var(--clr-bg-surface-1);
+}
+
+hr {
+    color: var(--clr-lines);
+    margin-bottom: 1rem;
+}
+
+/* Coupon code */
+.cart__coupon {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.coupon__input {
+    flex-grow: 1;
+    background-color: var(--clr-input-coupon);
+}
+
+/* Global input and buttons */
+input {
+    color: var(--clr-text);
+    padding: 0.2rem 0.7rem;
+    outline: none;
+    border-radius: 6px;
+    border: 1.5px solid var(--clr-lines);
+    transition: border-color 250ms ease;
+}
+
+input:focus {
+    border-color: var(--clr-lines-active);
+}
+
+input::placeholder {
+    color: var(--clr-text-placeholder);
+    opacity: 1;
+}
+
+button {
+    white-space: nowrap;
+    color: var(--clr-text-alt);
+    background-color: var(--clr-primary);
+    padding: 0.2rem 0.7rem;
+    border-radius: 6px;
+    border: 1.5px solid var(--clr-primary);
+    transition: background-color 250ms ease,
+        border-color 250ms ease; 
+}
+
+button:hover {
+    background-color: var(--clr-primary-active);
+    border-color: var(--clr-primary-active);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* for tabbing */
+button:focus-visible {
+    outline: 1.5px solid var(--clr-primary);
+    outline-offset: 2px;
 }
