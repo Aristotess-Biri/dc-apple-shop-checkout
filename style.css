@@ -174,7 +174,6 @@ body {
     background-image: url("assets/background-image.png");
     background-repeat: no-repeat no-repeat;
     background-position: top;
-    background-size: contain;
 }
 
 /* Header */
@@ -288,4 +287,13 @@ button:focus-visible {
 
 .summary__spacing {
     margin-block: 0.6rem;
+}
+
+/* Responsive design */
+
+/*larger desktops */
+@media screen and (width >= 1280px) {
+    body {
+        background-size: contain;
+    }
 }
