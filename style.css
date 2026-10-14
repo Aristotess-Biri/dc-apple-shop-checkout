@@ -227,7 +227,7 @@ hr {
 /* Global input and buttons */
 input {
     color: var(--clr-text);
-    padding: 0.2rem 0.7rem;
+    padding: 0.4rem 0.8rem;
     outline: none;
     border-radius: 6px;
     border: 1.5px solid var(--clr-lines);
@@ -247,7 +247,7 @@ button {
     white-space: nowrap;
     color: var(--clr-text-alt);
     background-color: var(--clr-primary);
-    padding: 0.2rem 0.7rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 6px;
     border: 1.5px solid var(--clr-primary);
     transition: background-color 250ms ease,
