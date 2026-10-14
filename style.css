@@ -216,6 +216,7 @@ hr {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .coupon__input {
@@ -266,4 +267,23 @@ button:active {
 button:focus-visible {
     outline: 1.5px solid var(--clr-primary);
     outline-offset: 2px;
+}
+
+/* Cart summary */
+.cart__summary {
+    font: var(--font-body-medium);
+}
+
+.summary__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary__item--total {
+    font: var(--font-body-semibold);
+}
+
+.summary__spacing {
+    margin-block: 0.6rem;
 }
