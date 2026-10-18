@@ -163,6 +163,10 @@ padding is optional but i do this because of lists*/
     --font-body-regular: 400 1rem/1.5 "Inter", sans-serif;
     --font-body-medium: 500 1rem/1.5 "Inter", sans-serif;
     --font-body-semibold: 600 1rem/1.5 "Inter", sans-serif;
+
+    /* Sizing */
+    --size-cart-image: 13rem;
+    --cart-margin: 3rem;
 }
 
 /* Base styling */
@@ -207,7 +211,7 @@ main {
 /* Shopping Cart */
 
 .cart {
-    padding: 1rem;
+    padding: var(--cart-margin);
     background-color: var(--clr-bg-surface-1);
 }
 
@@ -292,6 +296,63 @@ button:focus-visible {
 
 .summary__spacing {
     margin-block: 0.6rem;
+}
+
+/* shopping cart items */
+.cart__item {
+    margin-bottom: var(--cart-margin);
+    display: grid;
+    grid-template-columns: auto 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    column-gap: var(--cart-margin);
+}
+
+.cart__image {
+    background-color: var(--clr-bg-surface-2);
+    border-radius: 1rem;
+    width: var(--size-cart-image);
+    height: var(--size-cart-image);;
+    padding: 1rem;
+    grid-row: 1 / 4;
+    display: grid;
+    place-content: center;
+}
+
+.cart__device {
+    font: var(--font-body-semibold);
+    font-weight: 700;
+    color: var(--clr-text);
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.cart__color {
+    font: var(--font-body-medium);
+    color: var(--clr-text);
+    grid-row: 2;
+    grid-column: 2 / -1;
+}
+
+.cart__price {
+    font: var(--font-body-semibold);
+    font-weight: 700;
+    color: var(--clr-text);
+    grid-row: 1;
+    grid-column: -1;
+}
+
+.cart__number {
+    font: var(--font-body-regular);
+    color: var(--clr-text);
+    grid-row: 3;
+    grid-column: 2;
+    align-self: end;
+}
+
+.cart__icon {
+    grid-row: 3;
+    grid-column: -1;
+    align-self: end;
 }
 
 /* Responsive design */
