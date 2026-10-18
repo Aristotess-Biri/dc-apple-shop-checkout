@@ -199,6 +199,11 @@ header {
     align-items: center;
 }
 
+main {
+    border-radius: 1rem;
+    overflow: clip;
+}
+
 /* Shopping Cart */
 
 .cart {
