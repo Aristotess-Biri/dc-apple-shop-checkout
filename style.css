@@ -303,7 +303,7 @@ button:focus-visible {
     margin-bottom: var(--cart-margin);
     display: grid;
     grid-template-columns: auto 2fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: auto 2fr 1fr;
     column-gap: var(--cart-margin);
 }
 
@@ -353,6 +353,10 @@ button:focus-visible {
     grid-row: 3;
     grid-column: -1;
     align-self: end;
+}
+
+.grid__top {
+    margin-bottom: 0.4rem;
 }
 
 /* Responsive design */
