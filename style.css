@@ -305,13 +305,14 @@ button:focus-visible {
     grid-template-columns: auto 2fr 1fr;
     grid-template-rows: auto 2fr 1fr;
     column-gap: var(--cart-margin);
+    width: 100%;
 }
 
 .cart__image {
     background-color: var(--clr-bg-surface-2);
     border-radius: 1rem;
     width: var(--size-cart-image);
-    height: var(--size-cart-image);;
+    height: var(--size-cart-image);
     padding: 1rem;
     grid-row: 1 / 4;
     display: grid;
@@ -361,9 +362,15 @@ button:focus-visible {
 
 /* Responsive design */
 
-/*larger desktops */
+/* larger desktops */
 @media screen and (width >= 1280px) {
     body {
         background-size: contain;
     }
+}
+
+/* mobile */
+:root {
+    --size-cart-image: 9rem;
+    --cart-margin: 2rem;
 }
