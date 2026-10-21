@@ -76,7 +76,7 @@ padding is optional but i do this because of lists*/
 
 :where(img, svg, video, canvas, picture) {
     block-size: auto;
-    max-inline-size: 100%
+    max-inline-size: 100%;
 }
 
 /* 8. inherit font and letter spacing for form controls */
@@ -302,29 +302,36 @@ button:focus-visible {
 .cart__item {
     margin-bottom: var(--cart-margin);
     display: grid;
-    grid-template-columns: auto 2fr 1fr;
-    grid-template-rows: auto 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
     column-gap: var(--cart-margin);
-    width: 100%;
 }
 
-.cart__image {
+.cart__image-container {
     background-color: var(--clr-bg-surface-2);
     border-radius: 1rem;
     width: var(--size-cart-image);
     height: var(--size-cart-image);
     padding: 1rem;
     grid-row: 1 / 4;
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart__image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .cart__device {
     font: var(--font-body-semibold);
     font-weight: 700;
     color: var(--clr-text);
+    white-space: nowrap;
     grid-row: 1;
-    grid-column: 2;
+    grid-column: 2 / 4;
 }
 
 .cart__color {
@@ -340,6 +347,7 @@ button:focus-visible {
     color: var(--clr-text);
     grid-row: 1;
     grid-column: -1;
+    justify-self: end;
 }
 
 .cart__number {
@@ -354,6 +362,7 @@ button:focus-visible {
     grid-row: 3;
     grid-column: -1;
     align-self: end;
+    justify-self: end;
 }
 
 .grid__top {
@@ -369,8 +378,24 @@ button:focus-visible {
     }
 }
 
+/* tablet */
+@media screen and (max-width: 768px) {
+    :root {
+        --size-cart-image: 9rem;
+        --cart-margin: 2rem;
+    }
+    .cart__image-container {
+        padding: 0.8rem;
+    }
+}
+
 /* mobile */
-:root {
-    --size-cart-image: 9rem;
-    --cart-margin: 2rem;
+@media screen and (max-width: 412px) {
+    :root {
+        --size-cart-image: 6rem;
+        --cart-margin: 1rem;
+    }
+    .cart__image-container {
+        padding: 0.5rem;
+    }
 }
