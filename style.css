@@ -390,7 +390,7 @@ button:focus-visible {
 }
 
 /* mobile */
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 440px) {
     :root {
         --size-cart-image: 6rem;
         --cart-margin: 1rem;
