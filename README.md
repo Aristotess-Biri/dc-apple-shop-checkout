@@ -25,89 +25,42 @@
   - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Built with](#built-with)
-- [Features](#features)
-- [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
 <!-- OVERVIEW -->
 
 ## Overview
 
-![screenshot](docs/)
+![screenshot](assets/desktop.png)
 
 ### What I learned
 
-<!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge. -->
+This was meant to be a quick simple challenge for me, but it quickly became a learning hub. I had to recap many things I had forgotten or had glimpsed over in the past.
+
+One major example of this would be replaced elements e.g. images and their styling in CSS. This was my first time using the `<picture>` element in HTML. Also dealing with the browser defaults of input elements. Then knowing when best to use grid vs flexbox.
+
+This was a good example of knowing how to do something is vastly different from actually doing it.
 
 ### Useful resources
 
-<!--
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
--->
+- [HTML standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
+- This [article](https://dev.to/stasxreal/open-graph-for-websites-a-complete-guide-gof) on Open Graphs
+- Kevin Powell's [Responsive CSS Images](https://www.youtube.com/results?search_query=Kevin+Powell+responsive+CSS+images)
 
 ### Built with
-
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
-
-## Features
-
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
-
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges-dashboard) challenge.
 
 ## Acknowledgements
 
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
+- [W3C HTML validator](https://validator.w3.org/)
+- [W3C CSS validator](https://jigsaw.w3.org/css-validator/)
+- [CSS Clamp Generator](https://superspeedapp.com/tools/css-clamp-generator)
 
-## Author
+## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-
-
-## Project Summary
-A responsive web application recreating the Apple Shop checkout page design from [devchallenges.io](https://devchallenges.io/challenge/apple-shop-checkout-page-challenge). Built with semantic HTML, CSS, and Vanilla JavaScript.
-
-## Want to run this project?
-Follow these steps to get the project running on your local machine:
-
-1. **Clone the repo**.
-
-    In your terminal, run the following command:
-
-```bash
-git clone git@github.com:Aristotess-Biri/dc-apple-shop-checkout.git
-```
-
-2. **Open the folder in VS Code**.
-
-    Change directories into the folder:
-
-```bash
-cd dc-apple-shop-checkout
-```
-
-Then open it directly in VS Code:
-
-```bash
-code .
-```
-
-3. **View the project in your browser**.
-
-    Install the **Live Server** extension in VS Code, if you don't have it already.
-
-    Right-click index.html and choose **Open with Live Server**.
-
-
-> [!IMPORTANT]
-> Opening `index.html` directly (double-clicking it) won't work, the planet data fetch needs a local server to run.
+- GitHub [Aristotess-Biri](https://github.com/Aristotess-Biri/)
