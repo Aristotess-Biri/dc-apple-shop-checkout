@@ -165,9 +165,10 @@ padding is optional but i do this because of lists*/
     --font-body-semibold: 600 1rem/1.5 "Inter", sans-serif;
 
     /* Sizing */
-    --size-cart-image: 13rem;
-    --cart-margin: 3rem;
-    --form-margin: 1.25rem;
+    --size-cart-image: clamp(4rem, 2.5714rem + 7.1429vw, 9rem);
+    --cart-margin: clamp(1rem, 0.4286rem + 2.8571vw, 3rem);
+    --image-padding: clamp(0.5rem, 0.3571rem + 0.7143vw, 1rem);
+    --child-margin: 1.25rem;
 }
 
 /* Base styling */
@@ -207,6 +208,8 @@ header {
 main {
     border-radius: 1rem;
     overflow: clip;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* Shopping Cart */
@@ -231,19 +234,19 @@ hr {
 
 .coupon__input {
     flex-grow: 1;
+    width: 100%;
     background-color: var(--clr-input-coupon);
-    min-width: 0;
 }
 
 /* Global input and buttons */
 input, select {
+    min-width: 0;
     color: var(--clr-text);
     padding: 0.4rem 0.8rem;
     outline: none;
     border-radius: 6px;
     border: 1.5px solid var(--clr-lines);
     transition: border-color 250ms ease;
-    min-width: 0;
 }
 
 input:focus {
@@ -302,20 +305,21 @@ button:focus-visible {
 
 /* shopping cart items */
 .cart__item {
-    margin-bottom: var(--cart-margin);
+    margin-bottom: var(--child-margin);
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: auto 1fr auto;
     grid-template-rows: auto 1fr 1fr;
-    column-gap: var(--cart-margin);
+    column-gap: var(--child-margin);
 }
 
 .cart__image-container {
     background-color: var(--clr-bg-surface-2);
     border-radius: 1rem;
     width: var(--size-cart-image);
-    height: var(--size-cart-image);
-    padding: 1rem;
+    aspect-ratio: 1 / 1;
+    padding: var(--image-padding);
     grid-row: 1 / 4;
+    align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -327,20 +331,28 @@ button:focus-visible {
     object-fit: contain;
 }
 
+.cart__image--small {
+    max-width: 35%; 
+    height: auto; 
+}
+
 .cart__device {
     font: var(--font-body-semibold);
     font-weight: 700;
     color: var(--clr-text);
     white-space: nowrap;
     grid-row: 1;
-    grid-column: 2 / 4;
+    grid-column: 2;
+    min-width: 0; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cart__color {
     font: var(--font-body-medium);
     color: var(--clr-text);
     grid-row: 2;
-    grid-column: 2 / -1;
+    grid-column: 2 / 4;
 }
 
 .cart__price {
@@ -348,7 +360,7 @@ button:focus-visible {
     font-weight: 700;
     color: var(--clr-text);
     grid-row: 1;
-    grid-column: -1;
+    grid-column: 3;
     justify-self: end;
 }
 
@@ -362,7 +374,7 @@ button:focus-visible {
 
 .cart__icon {
     grid-row: 3;
-    grid-column: -1;
+    grid-column: 3;
     align-self: end;
     justify-self: end;
 }
@@ -388,16 +400,17 @@ button:focus-visible {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin-bottom: var(--form-margin);
+    margin-bottom: var(--child-margin);
 }
 
 .form__inline {
     display: flex;
-    gap: var(--form-margin);
+    gap: var(--child-margin);
     justify-content: space-between;
-    > * {
-        flex-grow: 1;
-    }
+}
+
+.form__inline > * {
+    flex-grow: 1;
 }
 
 .form__button {
@@ -414,6 +427,7 @@ button:focus-visible {
 
 .form__input {
     background-color: var(--clr-bg-main);
+    width: 100%;
 }
 
 .form__input::placeholder {
@@ -431,23 +445,12 @@ button:focus-visible {
 }
 
 /* tablet */
-@media screen and (max-width: 768px) {
-    :root {
-        --size-cart-image: 9rem;
-        --cart-margin: 2rem;
-    }
-    .cart__image-container {
-        padding: 0.8rem;
+@media screen and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
     }
 }
 
 /* mobile */
 @media screen and (max-width: 440px) {
-    :root {
-        --size-cart-image: 6rem;
-        --cart-margin: 1rem;
-    }
-    .cart__image-container {
-        padding: 0.5rem;
-    }
 }
