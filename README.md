@@ -1,43 +1,66 @@
-# dc-apple-shop-checkout
-An Apple shop checkout page website with a top navigation, summary section, and contact form section.
 
-## Live Demo
-<!-- Insert Netlify link after deployment -->
+<h1 align="center">dc-apple-shop-checkout | devChallenges</h1>
 
-## Project Summary
-A responsive web application recreating the Apple Shop checkout page design from [devchallenges.io](https://devchallenges.io/challenge/apple-shop-checkout-page-challenge). Built with semantic HTML, CSS, and Vanilla JavaScript.
+<div align="center">
+   Solution for a challenge <a href="https://devchallenges.io/challenge/apple-shop-checkout-page-challenge" target="_blank">Device Shop Checkout</a> from <a href="http://devchallenges.io" target="_blank">devChallenges.io</a>.
+</div>
 
-## Want to run this project?
-Follow these steps to get the project running on your local machine:
+<div align="center">
+  <h3>
+    <a href="apple-shop-checkout.netlify.app">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenge/apple-shop-checkout-page-challenge">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-1. **Clone the repo**.
+<!-- TABLE OF CONTENTS -->
 
-    In your terminal, run the following command:
+## Table of Contents
 
-```bash
-git clone git@github.com:Aristotess-Biri/dc-apple-shop-checkout.git
-```
+- [Overview](#overview)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Built with](#built-with)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
-2. **Open the folder in VS Code**.
+<!-- OVERVIEW -->
 
-    Change directories into the folder:
+## Overview
 
-```bash
-cd dc-apple-shop-checkout
-```
+![screenshot](assets/desktop.png)
 
-Then open it directly in VS Code:
+### What I learned
 
-```bash
-code .
-```
+This was meant to be a quick simple challenge for me, but it quickly became a learning hub. I had to recap many things I had forgotten or had glimpsed over in the past.
 
-3. **View the project in your browser**.
+One major example of this would be replaced elements e.g. images and their styling in CSS. This was my first time using the `<picture>` element in HTML. Also dealing with the browser defaults of input elements. Then knowing when best to use grid vs flexbox.
 
-    Install the **Live Server** extension in VS Code, if you don't have it already.
+This was a good example of knowing how to do something is vastly different from actually doing it.
 
-    Right-click index.html and choose **Open with Live Server**.
+### Useful resources
 
+- [HTML standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
+- This [article](https://dev.to/stasxreal/open-graph-for-websites-a-complete-guide-gof) on Open Graphs
+- Kevin Powell's [Responsive CSS Images](https://www.youtube.com/results?search_query=Kevin+Powell+responsive+CSS+images)
 
-> [!IMPORTANT]
-> Opening `index.html` directly (double-clicking it) won't work, the planet data fetch needs a local server to run.
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+
+## Acknowledgements
+
+- [W3C HTML validator](https://validator.w3.org/)
+- [W3C CSS validator](https://jigsaw.w3.org/css-validator/)
+- [CSS Clamp Generator](https://superspeedapp.com/tools/css-clamp-generator)
+
+## Contact
+
+- GitHub [Aristotess-Biri](https://github.com/Aristotess-Biri/)
