@@ -7,7 +7,7 @@
 
 <div align="center">
   <h3>
-    <a href="apple-shop-checkout.netlify.app">
+    <a href="https://aristotess-biri.github.io/dc-apple-shop-checkout/">
       Solution
     </a>
     <span> | </span>
