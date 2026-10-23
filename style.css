@@ -167,6 +167,7 @@ padding is optional but i do this because of lists*/
     /* Sizing */
     --size-cart-image: 13rem;
     --cart-margin: 3rem;
+    --form-margin: 1.25rem;
 }
 
 /* Base styling */
@@ -235,13 +236,14 @@ hr {
 }
 
 /* Global input and buttons */
-input {
+input, select {
     color: var(--clr-text);
     padding: 0.4rem 0.8rem;
     outline: none;
     border-radius: 6px;
     border: 1.5px solid var(--clr-lines);
     transition: border-color 250ms ease;
+    min-width: 0;
 }
 
 input:focus {
@@ -367,6 +369,56 @@ button:focus-visible {
 
 .grid__top {
     margin-bottom: 0.4rem;
+}
+
+/* Form */
+.form__section {
+    padding: var(--cart-margin);
+    background-color: var(--clr-bg-surface-2);
+}
+
+.form__heading {
+    font: var(--font-body-semibold);
+    font-weight: 700;
+    margin-bottom: 1.625rem;
+    color: var(--clr-text);
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-bottom: var(--form-margin);
+}
+
+.form__inline {
+    display: flex;
+    gap: var(--form-margin);
+    justify-content: space-between;
+    > * {
+        flex-grow: 1;
+    }
+}
+
+.form__button {
+    width: 100%;
+    text-align: center;
+}
+
+.form__label {
+    font: var(--font-body-semibold);
+    font-size: 85%;
+    color: var(--clr-text);
+    margin-bottom: 0.5rem;
+}
+
+.form__input {
+    background-color: var(--clr-bg-main);
+}
+
+.form__input::placeholder {
+    color: var(--clr-text);
+    opacity: 0.7;
 }
 
 /* Responsive design */
